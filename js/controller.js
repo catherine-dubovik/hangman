@@ -53,12 +53,10 @@ class Controller{
     }
     touchStart(EO){
         EO = EO||window.event;
-        EO.preventDefault(); 
         this.swipeStart = EO.changedTouches[0];
     }
     touchEnd(EO){
         EO = EO||window.event;
-        EO.preventDefault(); 
         this.swipeEnd = EO.changedTouches[0];
         let horzShift=Math.abs(this.swipeStart.pageX - this.swipeEnd.pageX);
         let vertShift=Math.abs(this.swipeStart.pageY - this.swipeEnd.pageY);

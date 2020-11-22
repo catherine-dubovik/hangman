@@ -450,13 +450,7 @@ table {
     .logo img {
         width: 80vw;
         max-width: 100vh;      
-    }
-    .bg__image {
-        max-width: 70vw;
-    }
-    .bg__image--left{
-        left: -55px;
-    }
+    } 
     .modal p {
         padding-top: 0;
     }
