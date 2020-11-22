@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <title>Hangman game</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://fe.it-academy.by/JQ/jquery.js"></script>
+</head>
+<body>
+    <audio id="mySound" preload loop>
+        <source src="sounds/Karazhan.ogg" type="audio/ogg; codecs=vorbis">
+        <source src="sounds/Karazhan.mp3" type="audio/mpeg">
+    </audio>
+    <div class="main">
+        <button type="button" id="mute" onclick="playBgMusic()">
+            <img src="img/mute.svg">
+        </button>
+        <div class="container">
+            <div class="menu" id="menu">
+                <div class="logo">
+                    <img src="img/logo.png" alt="game logo">
+                </div>
+                <div class="nav" id="nav">
+                    <ul class="nav__block">
+                        <li><a class="glow" href="#userInfo" class="link" id="new-game">Новая игра</a></li>
+                        <li><a class="glow" href="#rules" class="link" id="show-rules">Правила</a></li>
+                        <li><a class="glow" href="#records" class="link" id="show-records">Рекорды</a></li>
+                    </ul>
+                </div>
+            </div>
+            <form class="modal modal--new-game hidden" name="userinfo" id="userInfo">
+                <p>Введите Ваше имя:</p>
+                <input name="username" type="text">
+                <p>Уровень сложности:</p>
+                <div class="radio-container">
+                    <input type="radio" name="level" id="level1" value="1" checked>
+                    <label for="level1" class="label1">
+                        <span>легко</span>
+                    </label>
+                    <input type="radio" name="level" id="level2" value="2">
+                    <label for="level2" class="label2">
+                        <span>сложно</span>
+                    </label>
+                </div>
+                <p>Игровая вселенная:</p>
+                <div class="radio-container">
+                    <input type="radio" name="game" id="game1" value="warcraft" checked>
+                    <label for="game1" class="label1">
+                        <span>Warcraft</span>
+                    </label>
+                    <input type="radio" name="game" id="game2" value="dark souls">
+                    <label for="game2" class="label2">
+                        <span>Dark Souls</span>
+                    </label>
+                </div>
+                <a class="glow" href="#play" class="link" id="ready" >Начать</a>
+            </form>
+            <div class="modal rules hidden" id="rules">
+                <h2>Правила</h2>
+                <button class="close" type="button">&#10006;</button>
+                <ul>
+                    <li>Игра 'Hangman' - это оригинальная викторина по истории 2-ух игровых миров (Warcraft и Dark Souls).</li>
+                    <li>Сложность игры. На легком уровне у Вас будет 7 жизней, на сложном - 5 жизней и 10 секунд на выбор буквы (показатель счета x2)</li>
+                    <li>Показатель счета. +5 очков при 1-2 &#10084;, +10 очков при 3-5 &#10084;, +15 очков при 6-7 &#10084;</li>
+                    <li>Показатель счета при повышенном уровне. +10 очков при 1 &#10084;, +20 очков при 2-3 &#10084;, +30 очков при 4-5 &#10084;</li>
+                    <li>При игре на ПК Вы можете вводить буквы на клавиатуре, если у Вас русская раскладка и отключен Caps Lock</li>
+                </ul>
+            </div>
+            <div class="modal records hidden" id="records">
+                <h2>Рекорды</h2>
+                <button class="close" type="button">&#10006;</button>
+                <div class="records__block"></div>
+            </div>
+            <div class="game hidden" id="play">
+                <div class="live"></div>
+                <div class="hangman"></div>
+                <div class="word"></div>
+                <div class="hint"></div>
+                <div class="alphabet"></div>
+            </div>
+        </div>
+        <div class="bg">
+            <img class="bg__image bg__image--left" src="img/bg_left.png" alt="">
+            <img class="bg__image bg__image--right" src="img/bg_right.png" alt="">
+        </div>
+    </div>
+    <script src="js/model.js" ></script> 
+    <script src="js/view.js" ></script>
+    <script src="js/controller.js"></script> 
+    <script src="js/main.js" ></script> 
+</body>
+</html>
