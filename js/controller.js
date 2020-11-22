@@ -7,8 +7,8 @@ class Controller{
         this.modal=null;
         this.rules = null;
         this.records = null;
-        this.swipeStart = null;
-        this.swipeEnd = null;
+        this.swipeStart = 0;
+        this.swipeEnd = 0;
     }
     start(model, container){
         this.model = model;
@@ -53,16 +53,20 @@ class Controller{
     }
     touchStart(EO){
         EO = EO||window.event;
-        this.swipeStart = EO.changedTouches[0];
+        EO.preventDefault(); 
+        this.swipeStart = EO.targetTouches[0];
     }
     touchEnd(EO){
         EO = EO||window.event;
-        this.swipeEnd = EO.changedTouches[0];
+        EO.preventDefault(); 
+        this.swipeEnd = EO.targetTouches[0];
         let horzShift=Math.abs(this.swipeStart.pageX - this.swipeEnd.pageX);
         let vertShift=Math.abs(this.swipeStart.pageY - this.swipeEnd.pageY);
         if(vertShift > horzShift && vertShift > 30){
-            this.animateBlock(EO.target);
+            this.animateBlock(EO.targetTouches[0].target);
         }
+        this.swipeStart = 0;
+        this.swipeEnd = 0;
     }
     clickBtn(EO){
         EO = EO||window.event;
