@@ -434,6 +434,18 @@ table {
         width: 80vw;
         max-width: 100vh;
     }
+    #mute{
+        height: 30px;
+        width: 30px;
+        left: 10px;
+        top: 10px;
+    }
+    table, th, td {
+        padding: .7vh 2vw;
+    }
+    .live{
+        min-height: 40px;
+    }
     .logo img {
         width: 80vw;
         max-width: 100vh;      
@@ -445,7 +457,6 @@ table {
         left: -55px;
     }
     .modal p {
-        /*margin: 2vh;*/
         padding-top: 0;
     }
     .modal a{
