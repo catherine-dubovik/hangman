@@ -62,12 +62,8 @@ body {
     padding-top: 10vh;
 }
 @keyframes show-block{
-    0% {
-        top: -100vh;
-    }
-    100% {
-        top: 0;
-    }
+    0%{top: -100vh;}
+    100%{top: 0;}
 }
 .modal{
     position: relative;
