@@ -301,11 +301,7 @@ a{
     margin: 0 auto;
 }
 .live{
-    padding: 10px 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 40px;
+    padding: 0 0;
 }
 .heart{
     color: #e8f594;
@@ -462,10 +458,7 @@ table {
     }
     .rules ul {
         font-size: 16px;
-    }  
-    .game, .score {
-        height: 85vh;
-    } 
+    }   
 }
 
 /* Media 770px
@@ -548,7 +541,7 @@ table {
         right: -35px;
     }
     .live{
-        padding: 2px;
+        padding: 0 0;
     }
     .game > div {
         width: 100%;
@@ -585,12 +578,6 @@ table {
         top: 0;
         left: 0;
     }
-    .word {
-        padding: 1vh 0;
-    }
-    .hint {
-        padding: 0 3vw 1vh;
-    }
 }
 /* Media height 770px
 ==========================*/
@@ -624,16 +611,13 @@ table {
         max-width: 45%;
         margin: 0 auto;
     }
-    .game, .score {
-        height: 80vh;
-    }
     .live{
         justify-content: flex-start;
         height: 10vh;
     }
     .hint{
         font-size: 18px;
-        padding: 0 1vh;
+        padding: 0 3vw;
     }
     .hangman{
         height: 60vh;
