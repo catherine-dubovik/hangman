@@ -462,7 +462,10 @@ table {
     }
     .rules ul {
         font-size: 16px;
-    }   
+    }  
+    .game, .score {
+        height: 85vh;
+    } 
 }
 
 /* Media 770px
@@ -582,9 +585,6 @@ table {
         top: 0;
         left: 0;
     }
-    .game, .score {
-        height: 85vh;
-    }
     .word {
         padding: 1vh 0;
     }
@@ -625,7 +625,7 @@ table {
         margin: 0 auto;
     }
     .game, .score {
-        height: 85vh;
+        height: 80vh;
     }
     .live{
         justify-content: flex-start;
@@ -633,7 +633,7 @@ table {
     }
     .hint{
         font-size: 18px;
-        padding: 0 3vw;
+        padding: 0 1vh;
     }
     .hangman{
         height: 60vh;
