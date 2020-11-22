@@ -61,10 +61,6 @@ body {
 .menu{
     padding-top: 10vh;
 }
-@keyframes show-block{
-    0%{top: -100vh;}
-    100%{top: 0;}
-}
 .modal{
     position: relative;
     z-index: 3;
@@ -277,10 +273,6 @@ a{
     width: 35vh;
     height: 35vh;
 }
-
-@keyframes run {
-  to { background-position: 100% 0; }
-}
 .alive{
     position: relative;
 }
@@ -425,6 +417,14 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     font-size: 1.8vh;
+}
+
+@keyframes run {
+    to { background-position: 100% 0; }
+}
+@keyframes show-block{
+    0%{top: -100vh;}
+    100%{top: 0;}
 }
 
 /* Media 1040px
