@@ -468,9 +468,16 @@ table {
     .bg__image--left{
         left: -55px;
     }
+    .game, .score{
+        height: 85vh;
+    }
     .alphabet__block {
         display: flex;
         justify-content: center;
+    }
+    .live{
+        min-height: 40px;
+        padding-top: 0;
     }
     .wrapper{
         width: 70vw;
@@ -522,14 +529,8 @@ table {
     .bg__image--right{
         right: -35px;
     }
-    .live{
-        padding-top: 0;
-    }
     .game > div {
         width: 100%;
-    }
-    .word{
-        padding: 3vh 0;
     }
     .word div{
         width: 5vh;
