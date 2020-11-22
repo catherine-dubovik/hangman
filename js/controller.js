@@ -54,12 +54,12 @@ class Controller{
     touchStart(EO){
         EO = EO||window.event;
         EO.preventDefault(); 
-        this.swipeStart = EO.targetTouches[0];
+        this.swipeStart = EO.changedTouches[0];
     }
     touchEnd(EO){
         EO = EO||window.event;
         EO.preventDefault(); 
-        this.swipeEnd = EO.targetTouches[0];
+        this.swipeEnd = EO.changedTouches[0];
         let horzShift=Math.abs(this.swipeStart.pageX - this.swipeEnd.pageX);
         let vertShift=Math.abs(this.swipeStart.pageY - this.swipeEnd.pageY);
         if(vertShift > horzShift && vertShift > 30){
@@ -69,8 +69,6 @@ class Controller{
                 this.animateBlock(this.records);
             }
         }
-        this.swipeStart = 0;
-        this.swipeEnd = 0;
     }
     clickBtn(EO){
         EO = EO||window.event;
