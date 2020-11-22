@@ -63,7 +63,11 @@ class Controller{
         let horzShift=Math.abs(this.swipeStart.pageX - this.swipeEnd.pageX);
         let vertShift=Math.abs(this.swipeStart.pageY - this.swipeEnd.pageY);
         if(vertShift > horzShift && vertShift > 30){
-            this.animateBlock(EO.targetTouches[0].target);
+            if(window.location.hash === '#rules'){
+                this.animateBlock(this.rules);
+            }else if(window.location.hash === '#records'){
+                this.animateBlock(this.records);
+            }
         }
         this.swipeStart = 0;
         this.swipeEnd = 0;
