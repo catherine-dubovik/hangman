@@ -416,9 +416,9 @@ table {
     0%{top: -100vh;}
     100%{top: 0;}
 }
-/* Media 1040px
+/* Media 1100px
 ==========================*/
-@media (max-width: 1040px){
+@media (max-width: 1100px){
     .container{
         width: 80vw;
         max-width: 100vh;
@@ -426,6 +426,13 @@ table {
     .logo img {
         width: 80vw;
         max-width: 100vh;      
+    }
+    .game, .score{
+        height: 85vh;
+    }
+    .live{
+        min-height: 45px;
+        padding-top: 10px;
     }
     .bg__image {
         max-width: 70vw;
@@ -468,16 +475,9 @@ table {
     .bg__image--left{
         left: -55px;
     }
-    .game, .score{
-        height: 85vh;
-    }
     .alphabet__block {
         display: flex;
         justify-content: center;
-    }
-    .live{
-        min-height: 40px;
-        padding-top: 0;
     }
     .wrapper{
         width: 70vw;
