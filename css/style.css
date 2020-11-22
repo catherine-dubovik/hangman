@@ -301,7 +301,11 @@ a{
     margin: 0 auto;
 }
 .live{
-    padding: 0 0;
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: max-content;
 }
 .heart{
     color: #e8f594;
@@ -329,7 +333,7 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 15px 0;
+    padding: 1.5vh 0;
 }
 .word div{
     text-transform: uppercase;
@@ -353,7 +357,7 @@ a{
 }
 
 .hint{
-    padding-bottom: 15px;
+    padding: 0 1.5vw 1.5vh;
 }
 
 .alphabet__block{
@@ -432,10 +436,13 @@ table {
         max-width: 100vh;
     }
     #mute{
-        height: 30px;
-        width: 30px;
+        height: 35px;
+        width: 35px;
         left: 10px;
         top: 10px;
+    }
+    .score, .game{
+        height: 85vh;
     }
     table, th, td {
         padding: .7vh 2vw;
@@ -458,7 +465,7 @@ table {
     }
     .rules ul {
         font-size: 16px;
-    }   
+    } 
 }
 
 /* Media 770px
@@ -541,13 +548,10 @@ table {
         right: -35px;
     }
     .live{
-        padding: 0 0;
+        padding-top: 0;
     }
     .game > div {
         width: 100%;
-    }
-    .word{
-        padding: 3vh 0;
     }
     .word div{
         width: 5vh;
@@ -556,7 +560,6 @@ table {
     }
     .hint{
         font-size: 20px;
-        padding: 0 3vw 3vw;
     }
     .alphabet__block{
         padding-bottom: 3vw;;
@@ -605,26 +608,27 @@ table {
     }
     .game{
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: flex-start;
     }
     .game > div{
         max-width: 45%;
         margin: 0 auto;
     }
     .live{
+        padding: 3px;
+        min-height: max-content;
         justify-content: flex-start;
         height: 10vh;
     }
     .hint{
         font-size: 18px;
-        padding: 0 3vw;
     }
     .hangman{
         height: 60vh;
     }
     .word{
-        padding: 10px 0;
-        height: 20vh;
+        padding: 7px 0;
+        height: 15vh;
     }
     .word div{
         width: 5vw;
