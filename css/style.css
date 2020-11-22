@@ -592,19 +592,6 @@ table {
     .alive, .dead {
         margin: 10px 0;
     }
-    .logo{
-        width: 30vw;
-        margin: 0 auto;
-    }
-    .logo img {
-        width: 30vw;
-    }
-    .alphabet__block li{
-        width: 4.5vw;
-        line-height: 4.5vw;
-        margin: 2px;
-        font-size: 20px;
-    }
 }
 
 /* Media height 660px
@@ -616,7 +603,6 @@ table {
     .game{
         flex-wrap: wrap;
         justify-content: flex-start;
-        margin-top: 2vh;
     }
     .game > div{
         max-width: 47%;
@@ -646,6 +632,12 @@ table {
     .alphabet__block{
         padding-bottom: 0;
     }
+    .alphabet__block li{
+        width: 5vw;
+        line-height: 5vw;
+        margin: 3px;
+        font-size: 20px;
+    }
     .letter {
         border: 1px solid #e8f594;
     }
@@ -661,6 +653,13 @@ table {
 @media (max-height: 550px){
     .menu {
         padding-top: 5vh;
+    }
+    .logo{
+        width: 30vw;
+        margin: 0 auto;
+    }
+    .logo img {
+        width: 30vw;
     }
     .container {
         max-width: 90vw;
