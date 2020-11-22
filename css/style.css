@@ -582,6 +582,15 @@ table {
         top: 0;
         left: 0;
     }
+    .game, .score {
+        height: 85vh;
+    }
+    .word {
+        padding: 1vh 0;
+    }
+    .hint {
+        padding: 0 3vw 1vh;
+    }
 }
 /* Media height 770px
 ==========================*/
@@ -614,6 +623,9 @@ table {
     .game > div{
         max-width: 45%;
         margin: 0 auto;
+    }
+    .game, .score {
+        height: 85vh;
     }
     .live{
         justify-content: flex-start;
