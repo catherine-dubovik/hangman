@@ -13,17 +13,6 @@ body {
     font-size: 24px;
     color: #e8f594;
 }
-#mute{
-    position: absolute;
-    height: 4vh;
-    width: 4vh;
-    left: 3vh;
-    top: 3vh;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
 .main{
     position: relative;
     overflow: hidden;
@@ -61,6 +50,14 @@ body {
 .menu{
     padding-top: 10vh;
 }
+@keyframes show-block{
+    0% {
+        top: -100vh;
+    }
+    100% {
+        top: 0;
+    }
+}
 .modal{
     position: relative;
     z-index: 3;
@@ -96,6 +93,7 @@ body {
 .modal a{
     margin: 50px 0;
 }
+
 .radio-container{
     height: 60px;
     width: 260px;
@@ -134,6 +132,7 @@ input:checked + label{
     color: black;
     transition: .7s;
 }
+
 .rules, .records{
     font-size: 20px;
     animation-name: show-block;
@@ -170,6 +169,7 @@ input:checked + label{
 .rules li{
     margin: 1vh 5vh;
 }
+
 .nav__block li{
     margin: auto;
     max-width: 260px;
@@ -231,6 +231,7 @@ a{
     height: 100%;
     transition-delay: 0s;
 }
+
 /* Game */
 .game{
     display: flex;
@@ -254,40 +255,24 @@ a{
     background-color: #192538;
 }
 .wrapper{
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     width: 550px;
     margin: 0 auto;
     padding: 20px;
 }
-.alive, .dead{
+.alive{
     margin: 30px 0;
     background-color: white;
-    width: 35vh;
-    height: 35vh;
-}
-.alive{
-    position: relative;
-}
-.alive > div{
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    background-image: url("../img/alive.jpg");
     width: 100%;
-    height: 100%;
-    background-size: 1200%;
-    background-repeat: no-repeat;
-    animation: run 1s infinite steps(11);
-}
-.dead{
+    height: 35vh;
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
 }
+
 .game > .score{
     width: 100%;
 }
@@ -299,7 +284,6 @@ a{
     padding-top: 20px;
     display: flex;
     justify-content: flex-end;
-    min-height: 60px;
 }
 .heart{
     color: #e8f594;
@@ -335,6 +319,7 @@ a{
     line-height: 50px;
     width: 50px;
     height: 50px;
+    color: transparent;
     font-size: 28px;
     text-align: center;
     margin: 4px;
@@ -349,9 +334,11 @@ a{
     color: white;
     transition: all .4s;
 }
+
 .hint{
     padding-bottom: 15px;
 }
+
 .alphabet__block{
     display: flex;
     flex-wrap: wrap;
@@ -381,44 +368,17 @@ a{
     background-color: #3f8e91;
     border: 2px solid #3f8e91;
 }
+
 .hidden{
     display: none;
 }
 .transparent{
     opacity: 0;
 }
-.timer{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 40px;
-    top: 15px;
-}
-.timer span{
-    font-weight: bold;
-    font-size: 28px;
-}
-table, th, td {
-    border: 1px solid #081019;
-    text-align: center;
-    padding: .7vh 1vh;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    font-size: 1.8vh;
-}
-/* Keyframes*/
-@keyframes run {
-    to { background-position: 100% 0;}
-}
-@keyframes show-block{
-    0%{top: -100vh;}
-    100%{top: 0;}
-}
-/* Media 1100px
+
+/* Media 1040px
 ==========================*/
-@media (max-width: 1100px){
+@media (max-width: 1040px){
     .container{
         width: 80vw;
         max-width: 100vh;
@@ -426,13 +386,6 @@ table {
     .logo img {
         width: 80vw;
         max-width: 100vh;      
-    }
-    .game, .score{
-        height: 85vh;
-    }
-    .live{
-        min-height: 45px;
-        padding-top: 10px;
     }
     .bg__image {
         max-width: 70vw;
@@ -451,6 +404,7 @@ table {
         font-size: 16px;
     }   
 }
+
 /* Media 770px
 ==========================*/
 @media (max-width: 770px){
@@ -479,22 +433,6 @@ table {
         display: flex;
         justify-content: center;
     }
-    .wrapper{
-        width: 70vw;
-    }
-    .wrapper a{
-        padding: 0;
-    }
-    .wrapper > div{
-        max-width: 70vw;
-    }
-    .wrapper > img{
-        height: 120px;
-        width: 220px;
-    }
-    .dead{
-        margin: 15px 0;
-    }
 }
 /* Media 550px
 ==========================*/
@@ -518,19 +456,22 @@ table {
     .rules ul {
         font-size: 14px;
     }
-    .alive, .dead {
-        width: 30vh;
-        height: 30vh;
-    }
 }
+
 /* Media 440px
 ==========================*/
 @media (max-width: 440px){
     .bg__image--right{
         right: -35px;
     }
+    .live{
+        padding-top: 0;
+    }
     .game > div {
         width: 100%;
+    }
+    .word{
+        padding: 3vh 0;
     }
     .word div{
         width: 5vh;
@@ -553,35 +494,8 @@ table {
     .letter {
         border: 1px solid #e8f594;
     }
-    .wrapper > img{
-        height: 80px;
-        width: 150px;
-    }
-    .timer{
-        top: 0;
-        left: 0;
-    }
-    #mute {
-        top: 1vh;
-    }
 }
-/* Media height 770px
-==========================*/
-@media (max-height: 770px){
-    .wrapper > img {
-        height: 100px;
-        width: 200px;
-    }
-    .wrapper .hint{
-        padding: 0;
-    }
-    .wrapper a{
-        margin: 0;
-    }
-    .alive, .dead {
-        margin: 10px 0;
-    }
-}
+
 /* Media height 660px
 ==========================*/
 @media (max-height: 660px){
@@ -629,19 +543,11 @@ table {
     .letter {
         border: 1px solid #e8f594;
     }
-    .timer{
-        left: 35vw;
-        top: -3px;
-    }
-    #mute{
-        height: 4vw;
-        width: 4vw;
-        left: 3vh;
-        top: 3vh;
-    }
 }
+
 /* Media height 550px
 ==========================*/
+
 @media (max-height: 550px){
     .menu {
         padding-top: 5vh;
@@ -686,15 +592,6 @@ table {
     }
     .rules ul {
         font-size: 14px;
-    }
-    .wrapper {
-        width: 90vw;
-    }
-    .dead, .alive{
-        display: none;
-    }
-    .live{
-        min-height: 0;
     }
 }
 
