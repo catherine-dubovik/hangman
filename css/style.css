@@ -603,6 +603,7 @@ table {
     .game{
         flex-wrap: wrap;
         justify-content: flex-start;
+        margin-top: 2vh;
     }
     .game > div{
         max-width: 47%;
@@ -660,6 +661,9 @@ table {
     }
     .logo img {
         width: 30vw;
+    }
+    a {
+        margin: 3vh 15px;
     }
     .container {
         max-width: 90vw;
