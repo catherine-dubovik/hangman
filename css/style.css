@@ -301,10 +301,11 @@ a{
     margin: 0 auto;
 }
 .live{
-    padding-top: 20px;
+    padding: 10px 0;
     display: flex;
     justify-content: flex-end;
-    min-height: 60px;
+    align-items: center;
+    min-height: 40px;
 }
 .heart{
     color: #e8f594;
@@ -443,9 +444,6 @@ table {
     table, th, td {
         padding: .7vh 2vw;
     }
-    .live{
-        min-height: 40px;
-    }
     .logo img {
         width: 80vw;
         max-width: 100vh;      
@@ -547,7 +545,7 @@ table {
         right: -35px;
     }
     .live{
-        padding-top: 0;
+        padding: 2px;
     }
     .game > div {
         width: 100%;
@@ -618,7 +616,6 @@ table {
         margin: 0 auto;
     }
     .live{
-        padding-top: 0;
         justify-content: flex-start;
         height: 10vh;
     }
