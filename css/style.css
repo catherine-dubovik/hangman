@@ -299,7 +299,7 @@ a{
     padding-top: 20px;
     display: flex;
     justify-content: flex-end;
-    min-height: 60px;
+    min-height: 45px;
 }
 .heart{
     color: #e8f594;
