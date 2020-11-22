@@ -592,6 +592,13 @@ table {
     .alive, .dead {
         margin: 10px 0;
     }
+    .logo{
+        width: 30vw;
+        margin: 0 auto;
+    }
+    .logo img {
+        width: 30vw;
+    }
 }
 
 /* Media height 660px
@@ -603,6 +610,7 @@ table {
     .game{
         flex-wrap: wrap;
         justify-content: flex-start;
+        margin-top: 2vh;
     }
     .game > div{
         max-width: 47%;
@@ -653,13 +661,6 @@ table {
 @media (max-height: 550px){
     .menu {
         padding-top: 5vh;
-    }
-    .logo{
-        width: 50vw;
-        margin: 0 auto;
-    }
-    .logo img {
-        width: 50vw;
     }
     .container {
         max-width: 90vw;
